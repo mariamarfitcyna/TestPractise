@@ -1,11 +1,14 @@
-package ru.urfu;
+package FakeBot;
 
+import ru.urfu.IBot;
 
 import java.util.ArrayList;
 import java.util.List;
 
 
 public class FakeBot implements IBot {
+
+
 
     private final List<String> messages = new ArrayList<>();
 
@@ -21,5 +24,9 @@ public class FakeBot implements IBot {
     @Override
     public void sendMessageWithButtons(Long id, String message, String keyboardLayout) {
 
+    }
+
+    public String getLastMessage(){
+        return messages.get(messages.size()-1);
     }
 }
