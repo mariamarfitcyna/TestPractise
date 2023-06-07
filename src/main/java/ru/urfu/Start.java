@@ -17,6 +17,7 @@ public class Start {
      */
     public static void main(String[] args){
         try {
+            System.out.println("Some changes to pr");
             TelegramBotsApi botsApi = new TelegramBotsApi(DefaultBotSession.class);
             botsApi.registerBot(new TelegramBot());
         } catch (TelegramApiException e) {
